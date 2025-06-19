@@ -1,6 +1,6 @@
 import pool from '@/lib/db';
 
-export async function GET(req) {
+export async function GET() {
   try {
     const [tickets] = await pool.query(`
       SELECT t.*, 

@@ -1,4 +1,4 @@
-// Roles API route stub
+// Rolen API route 
 const roles = ['customer', 'support1', 'support2', 'admin'];
 
 export async function GET() {

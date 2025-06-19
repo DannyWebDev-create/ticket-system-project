@@ -1,6 +1,7 @@
 import { cookies } from 'next/headers';
 import mysql from 'mysql2/promise';
 
+// logindaten aus .env (abgesichert)
 const dbConfig = {
   host: process.env.DB_HOST,
   user: process.env.DB_USER,

@@ -2,7 +2,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import { cookies } from 'next/headers';
 
-export const maxSize = 5 * 1024 * 1024; // 5MB
+const maxSize = 5 * 1024 * 1024; // 5MB
 
 export async function POST(req) {
   const cookieStore = cookies();

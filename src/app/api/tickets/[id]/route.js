@@ -44,9 +44,9 @@ export async function PATCH(req, { params }) {
     if (!rows.length) {
       return new Response(JSON.stringify({ error: 'Ticket nicht gefunden' }), { status: 404 });
     }
-    // assigned_to-Logik wie bisher
+    // assigned_to-Logik 
     if (assigned_to !== undefined) {
-      // Nur verhindern, wenn assigned_to gesetzt werden soll UND es schon einen Bearbeiter gibt UND assigned_to NICHT null ist
+      // Verhindern, wenn assigned_to gesetzt werden soll UND es schon einen Bearbeiter gibt UND assigned_to NICHT null ist
       if (assigned_to && rows[0].assigned_to) {
         return new Response(JSON.stringify({ error: 'Ticket ist bereits zugewiesen' }), { status: 409 });
       }

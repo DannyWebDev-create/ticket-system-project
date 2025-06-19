@@ -2,12 +2,12 @@ import { cookies } from 'next/headers';
 import mysql from 'mysql2/promise';
 import bcrypt from 'bcryptjs';
 
-// Passe ggf. deine DB-Config an
+// Datenbankdaten aus .env (abgesichert)
 const dbConfig = {
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'test'
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE
 };
 
 export async function POST(req) {

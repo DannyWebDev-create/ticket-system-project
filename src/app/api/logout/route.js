@@ -1,5 +1,6 @@
 import { cookies } from 'next/headers';
 
+// Cookie entfernen
 export async function POST() {
   const cookieStore = cookies();
   cookieStore.set('user', '', {
